@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Disease Prediction System</title>
+    <style>
+
+        body{
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg,#4facfe,#00f2fe);
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+
+        .container{
+            background:white;
+            padding:40px;
+            border-radius:12px;
+            width:350px;
+            text-align:center;
+            box-shadow:0 8px 20px rgba(0,0,0,0.2);
+        }
+
+        h1{
+            color:#333;
+            margin-bottom:20px;
+        }
+
+        label{
+            font-weight:bold;
+            display:block;
+            margin-top:10px;
+            text-align:left;
+        }
+
+        select{
+            width:100%;
+            padding:8px;
+            margin-top:5px;
+            border-radius:5px;
+            border:1px solid #ccc;
+        }
+
+        button{
+            margin-top:20px;
+            width:100%;
+            padding:10px;
+            border:none;
+            border-radius:6px;
+            background:#4facfe;
+            color:white;
+            font-size:16px;
+            cursor:pointer;
+        }
+
+        button:hover{
+            background:#00c6ff;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>AI Disease Predictor</h1>
+
+<form action="/predict" method="POST">
+
+<label>Fever</label>
+<select name="fever">
+<option value="1">Yes</option>
+<option value="0">No</option>
+</select>
+
+<label>Cough</label>
+<select name="cough">
+<option value="1">Yes</option>
+<option value="0">No</option>
+</select>
+
+<label>Fatigue</label>
+<select name="fatigue">
+<option value="1">Yes</option>
+<option value="0">No</option>
+</select>
+
+<button type="submit">Predict Disease</button>
+
+</form>
+
+</div>
+
+</body>
+</html>
