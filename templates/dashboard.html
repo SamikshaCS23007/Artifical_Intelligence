@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dashboard</title>
+
+<style>
+body{
+    font-family:Arial;
+    background:#f4f4f4;
+}
+
+.container{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    margin-top:50px;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    width:260px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+select, button{
+    width:100%;
+    padding:8px;
+    margin-top:10px;
+}
+
+button{
+    background:#1877f2;
+    color:white;
+    border:none;
+}
+</style>
+</head>
+
+<body>
+
+<h2 style="text-align:center;">AI Disease Prediction System</h2>
+
+<div class="container">
+
+<div class="card">
+
+<form action="/predict" method="POST">
+
+<label>Fever</label>
+<select name="fever">
+<option value="0">No</option>
+<option value="1">Mild</option>
+<option value="2">High</option>
+</select>
+
+<label>Cough</label>
+<select name="cough">
+<option value="0">No</option>
+<option value="1">Dry</option>
+<option value="2">Severe</option>
+</select>
+
+<label>Fatigue</label>
+<select name="fatigue">
+<option value="0">No</option>
+<option value="1">Low</option>
+<option value="2">High</option>
+</select>
+
+<label>Headache</label>
+<select name="headache">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</select>
+
+<label>Sore Throat</label>
+<select name="throat">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</select>
+
+<button type="submit">Analyze</button>
+
+</form>
+
+</div>
+
+<div class="card">
+<h3>AI Expert System</h3>
+<p>Rule-Based + Probability System</p>
+
+<ul>
+<li>Fever → Flu</li>
+<li>Cough → Cold</li>
+<li>Fatigue → Allergy</li>
+<li>Throat → Infection</li>
+</ul>
+
+<br>
+
+<a href="/">
+<button style="background:red;">Logout</button>
+</a>
+
+</div>
+
+</div>
+
+</body>
+</html>
